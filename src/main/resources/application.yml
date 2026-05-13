@@ -17,11 +17,7 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
   rabbitmq:
-    host: ${RABBITMQ_HOST:localhost}
-    port: 5672
-    username: ${RABBITMQ_USER:guest}
-    password: ${RABBITMQ_PASSWORD:guest}
-
+    addresses: ${RABBITMQ_URL:amqp://guest:guest@localhost:5672/}
 server:
   port: ${PORT:8003}
 
